@@ -301,7 +301,7 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 6%;
+  bottom: 1%;
   transform: translateX(-50%);
   width: 55%;
   height: 8%;
