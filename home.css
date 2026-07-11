@@ -75,6 +75,13 @@ img { max-width: 100%; display: block; }
 
 .site-nav nav a:hover { text-decoration: underline; }
 
+.brand:focus-visible,
+.site-nav nav a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -159,6 +166,17 @@ img { max-width: 100%; display: block; }
 }
 
 .btn:active { transform: scale(0.97); }
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.btn-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 .btn-primary {
   background: var(--accent);
@@ -327,6 +345,12 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-links a:hover { text-decoration: underline; }
+
+.footer-links a:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 .footer-copy { margin: 0; }
 
