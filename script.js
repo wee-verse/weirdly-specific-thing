@@ -371,12 +371,16 @@ document.getElementById("btn-restart").addEventListener("click", () => {
   showScreen("quiz");
 });
 
-function shareText() {
+function shareMessage() {
   return `I took "What Weirdly Specific Thing Are You?" and the verdict is: ${currentResult.name} ${currentResult.emoji}\n\n${currentResult.blurb}`;
 }
 
+function shareUrl() {
+  return window.location.href.split("#")[0].split("?")[0];
+}
+
 document.getElementById("btn-copy").addEventListener("click", async () => {
-  const text = shareText();
+  const text = `${shareMessage()}\n\n${shareUrl()}`;
   try {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
@@ -399,14 +403,18 @@ document.getElementById("btn-copy").addEventListener("click", async () => {
 });
 
 document.getElementById("btn-share").addEventListener("click", async () => {
-  const text = shareText();
+  const url = shareUrl();
+  // Passing `url` (not just `text`) is what unlocks most share targets — many
+  // apps (Instagram, several messaging apps, etc.) only register as share
+  // targets for the Web Share API when a URL is present, not for plain text.
   if (navigator.share) {
     try {
-      await navigator.share({ title: "What Weirdly Specific Thing Are You?", text });
+      await navigator.share({ title: "What Weirdly Specific Thing Are You?", text: shareMessage(), url });
     } catch (err) {
       // user cancelled share sheet — no action needed
     }
   } else {
+    const text = `${shareMessage()}\n\n${url}`;
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
