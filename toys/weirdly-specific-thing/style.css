@@ -44,6 +44,17 @@ body {
   margin: 8px 0 28px;
 }
 
+.back-link {
+  display: inline-block;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.back-link:hover { text-decoration: underline; }
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;

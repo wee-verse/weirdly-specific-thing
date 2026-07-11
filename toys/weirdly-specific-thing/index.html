@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>What Weirdly Specific Thing Are You? — Weevil World</title>
+<meta name="description" content="Answer a few oddly specific questions and find out exactly which weirdly specific thing you are. Six questions, forty-five possible answers, zero sign-up.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="What Weirdly Specific Thing Are You?">
+<meta property="og:description" content="Six questions. Forty-five improbable outcomes. One answer that's somehow more accurate than it has any right to be.">
+<meta property="og:url" content="https://weevil.world/toys/weirdly-specific-thing/">
+<meta property="og:image" content="https://weevil.world/assets/garden-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://weevil.world/toys/weirdly-specific-thing/">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stage">
+
+    <header class="masthead">
+      <a href="/" class="back-link">← Weevil World</a>
+      <p class="eyebrow">a scientifically unnecessary quiz</p>
+      <h1>What Weirdly Specific<br>Thing Are You?</h1>
+    </header>
+
+    <main id="app" aria-live="polite">
+
+      <!-- INTRO -->
+      <section class="screen" id="screen-intro" data-screen>
+        <div class="card">
+          <p class="intro-text">Six questions. No wrong answers. One extremely specific result you did not ask for but definitely deserve.</p>
+          <button class="btn btn-primary" id="btn-start" type="button">Let's find out</button>
+          <p class="fine-print">Takes about 40 seconds. Diagnoses nothing.</p>
+        </div>
+      </section>
+
+      <!-- QUIZ -->
+      <section class="screen" id="screen-quiz" data-screen hidden>
+        <div class="card">
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <p class="q-counter" id="q-counter">Question 1 of 6</p>
+          <h2 class="q-text" id="q-text">Question</h2>
+          <div class="options" id="q-options" role="group"></div>
+          <button class="btn btn-ghost" id="btn-back" type="button">← Back</button>
+        </div>
+      </section>
+
+      <!-- RESULT -->
+      <section class="screen" id="screen-result" data-screen hidden>
+        <div class="card result-card">
+          <p class="result-eyebrow">You are, with unsettling accuracy...</p>
+          <div class="result-emoji" id="result-emoji" aria-hidden="true">🌀</div>
+          <h2 class="result-name" id="result-name">Result Name</h2>
+          <p class="result-blurb" id="result-blurb">Blurb goes here.</p>
+          <ul class="trait-list" id="result-traits"></ul>
+
+          <div class="result-actions">
+            <button class="btn btn-primary" id="btn-share" type="button">Share result</button>
+            <button class="btn btn-secondary" id="btn-copy" type="button">Copy result</button>
+            <button class="btn btn-ghost" id="btn-restart" type="button">Take it again</button>
+          </div>
+          <p class="copy-toast" id="copy-toast" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>No accounts, no tracking, no idea how this got so specific.</p>
+    </footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
