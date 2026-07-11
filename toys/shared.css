@@ -1,0 +1,83 @@
+/* Shared Weevil World "museum frame" for exhibit (toy) pages.
+   Each exhibit keeps its own inner card palette via its own style.css;
+   this file only governs the outer frame, header, and footer that
+   should read as the same site across every exhibit. */
+
+.world-frame {
+  min-height: 100svh;
+  background: linear-gradient(180deg, #0d1a22, #16303a 60%, #0d1a22);
+  display: flex;
+  flex-direction: column;
+}
+
+.world-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px clamp(16px, 5vw, 40px);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.world-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.world-brand-icon {
+  height: 30px;
+  width: auto;
+}
+
+.world-brand:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.world-exhibit-label {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.world-footer {
+  padding: 24px clamp(16px, 5vw, 40px) 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.world-footer a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.world-footer a:hover { text-decoration: underline; }
+
+.world-footer a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.world-footer .other-exhibit {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.001ms !important; }
+}

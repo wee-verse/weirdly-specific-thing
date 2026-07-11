@@ -234,18 +234,47 @@ img { max-width: 100%; display: block; }
   margin: 0 0 22px;
 }
 
-.coming-soon-card {
-  background: linear-gradient(135deg, #fff6fa, #eef8f9);
+/* ---------- Growth / flight loop ---------- */
+
+.growth-section { padding-top: 0; }
+
+.growth-card {
+  background: linear-gradient(135deg, #10222c, #16303a);
+  border-color: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 48px);
+  flex-wrap: wrap;
+  color: #fff;
 }
 
-.coming-soon-card h2 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+.growth-text {
+  flex: 1 1 320px;
+  min-width: 240px;
+}
+
+.growth-text .eyebrow { color: rgba(255,255,255,0.65); }
+
+.growth-text h2 {
+  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
   margin: 0 0 12px;
 }
 
-.coming-soon-card p {
+.growth-text p {
   margin: 0;
-  color: var(--ink-soft);
+  color: rgba(255,255,255,0.85);
+}
+
+.growth-media {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.flight-loop {
+  height: clamp(180px, 24vw, 320px);
+  width: auto;
 }
 
 /* ---------- Curator ---------- */

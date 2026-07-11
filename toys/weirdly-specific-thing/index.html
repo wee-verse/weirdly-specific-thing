@@ -19,16 +19,26 @@
 <meta name="twitter:description" content="Six questions. Forty-five improbable outcomes. One answer that's somehow more accurate than it has any right to be.">
 
 <link rel="canonical" href="https://weevil.world/toys/weirdly-specific-thing/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
-<link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/toys/shared.css">
 <link rel="stylesheet" href="style.css">
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a078705e5cea4a5994d2a8d118a85956"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<div class="world-frame">
+  <header class="world-header">
+    <a class="world-brand" href="/">
+      <img src="/assets/mascot-icon.png" alt="" class="world-brand-icon">
+      <span>Weevil World</span>
+    </a>
+    <span class="world-exhibit-label">Exhibit one · Personality assessment</span>
+  </header>
+
   <div class="stage">
 
     <header class="masthead">
-      <a href="/" class="back-link">← Weevil World</a>
       <p class="eyebrow">a scientifically unnecessary quiz</p>
       <h1>What Weirdly Specific<br>Thing Are You?</h1>
     </header>
@@ -60,6 +70,10 @@
       <!-- RESULT -->
       <section class="screen" id="screen-result" data-screen hidden>
         <div class="card result-card">
+          <picture>
+            <source srcset="/assets/favicon-64.png" media="(prefers-reduced-motion: reduce)">
+            <img src="/assets/head-wink.gif" alt="" class="result-mascot" width="40" height="40" loading="lazy">
+          </picture>
           <p class="result-eyebrow">You are, with unsettling accuracy...</p>
           <div class="result-emoji" id="result-emoji" aria-hidden="true">🌀</div>
           <h2 class="result-name" id="result-name">Result Name</h2>
@@ -81,6 +95,12 @@
       <p>No accounts, no tracking, no idea how this got so specific.</p>
     </footer>
   </div>
+
+  <footer class="world-footer">
+    <a href="/">← Back to the collection</a>
+    <a href="/toys/minor-omens/" class="other-exhibit">Try: What Minor Omen Has Been Following You? →</a>
+  </footer>
+</div>
 
 <script src="script.js"></script>
 </body>

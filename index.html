@@ -4,31 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Weevil World — a small world of oddly specific things</title>
-<meta name="description" content="A little collection of oddly specific quizzes and tiny diversions, curated by Duke Weevilton. Entirely unnecessary. Made to share.">
+<meta name="description" content="A growing collection of oddly specific quizzes, interactive curiosities, and discoveries of questionable importance, curated by Duke Weevilton.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Weevil World">
 <meta property="og:title" content="Weevil World">
-<meta property="og:description" content="A little collection of oddly specific quizzes and tiny diversions. Entirely unnecessary. Made to share.">
+<meta property="og:description" content="A growing collection of oddly specific quizzes, interactive curiosities, and discoveries of questionable importance.">
 <meta property="og:url" content="https://weevil.world/">
 <meta property="og:image" content="https://weevil.world/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Weevil World">
-<meta name="twitter:description" content="A little collection of oddly specific quizzes and tiny diversions. Entirely unnecessary. Made to share.">
+<meta name="twitter:description" content="A growing collection of oddly specific quizzes, interactive curiosities, and discoveries of questionable importance.">
 
 <link rel="canonical" href="https://weevil.world/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
-<link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="home.css">
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a078705e5cea4a5994d2a8d118a85956"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 
   <header class="site-nav">
-    <a class="brand" href="/">
-      <img src="assets/mascot-icon.png" alt="" class="brand-icon">
+    <a class="brand" href="/" id="brand-link">
+      <img src="assets/mascot-icon.png" alt="" class="brand-icon" id="brand-icon">
       <span>Weevil World</span>
     </a>
     <nav>
@@ -41,15 +42,12 @@
 
     <section class="hero">
       <div class="hero-bg">
-        <picture>
-          <source srcset="assets/garden-hero.webp" type="image/webp">
-          <img src="assets/garden-hero.jpg" alt="" class="hero-bg-img">
-        </picture>
+        <img src="assets/background.svg" alt="" class="hero-bg-img">
       </div>
       <img src="assets/mascot-cutout.png" alt="" class="hero-mascot">
       <div class="hero-content">
         <h1>Welcome to Weevil World</h1>
-        <p class="hero-sub">Oddly specific quizzes, tiny diversions, and discoveries of questionable importance.</p>
+        <p class="hero-sub">Oddly specific quizzes, interactive curiosities, and discoveries of questionable importance.</p>
         <div class="hero-actions">
           <a href="toys/weirdly-specific-thing/" class="btn btn-primary">Discover your weirdly specific thing</a>
           <a href="#collection" class="btn btn-link">Browse the collection ↓</a>
@@ -59,7 +57,7 @@
 
     <section class="section" id="collection">
       <div class="card featured-card">
-        <p class="eyebrow">Featured exhibit · Personality assessment</p>
+        <p class="eyebrow">Exhibit one · Personality assessment</p>
         <h2>What Weirdly Specific Thing Are You?</h2>
         <p class="featured-desc">Six questions. Forty-five improbable outcomes. One answer that is somehow more accurate than it has any right to be.</p>
         <p class="featured-meta">About 2 minutes · No sign-up</p>
@@ -73,17 +71,27 @@
         <p class="featured-meta">About 1 minute · No sign-up</p>
         <a href="toys/minor-omens/" class="btn btn-primary">Consult the cabinet</a>
       </div>
+    </section>
 
-      <div class="card coming-soon-card">
-        <p class="eyebrow">Next exhibit · In progress</p>
-        <h2>The cabinet is still being stocked.</h2>
-        <p>More peculiar assessments, generators, and interactive oddities are on their way. Duke Weevilton is cataloguing them as quickly as his four hands allow.</p>
+    <section class="section growth-section">
+      <div class="card growth-card">
+        <div class="growth-text">
+          <p class="eyebrow">Beyond the cabinet</p>
+          <h2>The collection is still moving.</h2>
+          <p>New interactive curiosities are being built — from quick questions to things you can properly get lost in. Duke Weevilton is cataloguing them as quickly as his four hands allow.</p>
+        </div>
+        <div class="growth-media">
+          <picture>
+            <source srcset="assets/flight-poster.png" media="(prefers-reduced-motion: reduce)">
+            <img src="assets/flight-loop.webp" alt="A weevil taking flight, hovering, and landing in a short animated loop" class="flight-loop" width="480" height="760" loading="lazy">
+          </picture>
+        </div>
       </div>
     </section>
 
     <section class="section curator-section">
       <div class="card curator-card">
-        <img src="assets/duke-portrait.webp" alt="Duke Weevilton, curator of Weevil World, in Victorian dress with a monocle and cane" class="curator-portrait">
+        <img src="assets/duke.svg" alt="Duke Weevilton, curator of Weevil World, in Victorian dress with a monocle and cane" class="curator-portrait">
         <div class="curator-text">
           <p class="eyebrow">A note from the curator</p>
           <p class="curator-quote">"This collection concerns the overlooked, the oddly revealing, and the difficult to explain at parties. New exhibits are being catalogued regularly."</p>
@@ -97,15 +105,15 @@
       <div class="principles">
         <div class="principle">
           <h3>Oddly specific</h3>
-          <p>Results with more personality than a generic type label.</p>
+          <p>Experiences with more personality than a generic type label.</p>
         </div>
         <div class="principle">
           <h3>Made to share</h3>
-          <p>Small experiences that end in something worth sending to a friend.</p>
+          <p>Discoveries worth sending to a friend — or comparing with one.</p>
         </div>
         <div class="principle">
-          <h3>Entirely unnecessary</h3>
-          <p>No productivity. No optimization. Just a good few minutes.</p>
+          <h3>Worth getting lost in</h3>
+          <p>No productivity. No optimization. Just strange little worlds that respect your time.</p>
         </div>
       </div>
     </section>
@@ -121,6 +129,23 @@
     </div>
     <p class="footer-copy">© 2026 Weevil World. Made somewhere in the undergrowth.</p>
   </footer>
+
+<script>
+  // Wink on hover/focus of the brand mark - a small reward, not a permanent animated favicon.
+  (function () {
+    var icon = document.getElementById('brand-icon');
+    var link = document.getElementById('brand-link');
+    if (!icon || !link) return;
+    var staticSrc = icon.getAttribute('src');
+    var winkSrc = 'assets/head-wink.gif';
+    function wink() { icon.src = winkSrc; }
+    function still() { icon.src = staticSrc; }
+    link.addEventListener('mouseenter', wink);
+    link.addEventListener('mouseleave', still);
+    link.addEventListener('focus', wink);
+    link.addEventListener('blur', still);
+  })();
+</script>
 
 </body>
 </html>
