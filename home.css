@@ -290,13 +290,32 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
-.curator-portrait {
+.curator-portrait-wrap {
+  position: relative;
   width: clamp(140px, 22vw, 220px);
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: #fdfaf5;
   flex-shrink: 0;
   margin: 0 auto;
+}
+
+.curator-portrait-wrap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 8%;
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 50%;
+  filter: blur(6px);
+  z-index: 0;
+}
+
+.curator-portrait {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
 }
 
 .curator-text {
@@ -404,6 +423,5 @@ img { max-width: 100%; display: block; }
     --accent-2: #6cc4cf;
     --shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.6);
   }
-  .curator-portrait { background: #241c16; }
   .collection-status { color: #0d2c2f; }
 }
