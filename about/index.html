@@ -15,13 +15,25 @@
   .simple-page p { margin: 0 0 16px; }
   .simple-page a.back { display:inline-block; margin-bottom: 24px; color: var(--ink-soft); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
   .simple-page a.back:hover { text-decoration: underline; }
+  .page-header {
+    background: url(/assets/share-bg.svg) top center / cover no-repeat;
+    padding: 16px clamp(16px, 5vw, 40px);
+  }
+  .page-header .brand-logo { height: 22px; width: auto; display: block; }
+  .simple-page { padding-top: clamp(30px, 5vw, 50px); }
+  .about-duke { width: 130px; float: right; margin: 0 0 12px 20px; }
+  @media (max-width: 520px) { .about-duke { float: none; display: block; margin: 0 auto 20px; } }
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a078705e5cea4a5994d2a8d118a85956"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+  <div class="page-header">
+    <a href="/"><img src="/assets/logo.svg" alt="Weevil World" class="brand-logo"></a>
+  </div>
   <main class="simple-page">
     <a href="/" class="back">← Weevil World</a>
     <h1>About Weevil World</h1>
+    <img src="/assets/duke.svg" alt="Duke Weevilton, curator of Weevil World" class="about-duke">
     <p>Weevil World is an independent collection of quizzes, generators, interactive stories, and — eventually — games, united by an interest in the oddly specific. Nothing here is trying to be productive, educational, or good for you — it's just supposed to be a little fun, and maybe worth sending to a friend with "this is so you" attached.</p>
     <p>The collection is nominally curated by Duke Weevilton, a Victorian gentleman weevil of unclear qualifications who insists on cataloguing everything as though it belongs in a museum. We've let him keep the job.</p>
     <p>Right now the cabinet holds two small exhibits. More are being built, ranging from quick diversions to things you can properly get lost in — this page will keep describing what actually exists, not what's planned.</p>

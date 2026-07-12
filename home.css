@@ -61,6 +61,11 @@ img { max-width: 100%; display: block; }
   width: auto;
 }
 
+.brand-logo {
+  height: 26px;
+  width: auto;
+}
+
 .site-nav nav {
   display: flex;
   gap: 20px;

@@ -17,6 +17,7 @@
   padding: 16px clamp(16px, 5vw, 40px);
   flex-wrap: wrap;
   gap: 10px;
+  background: url(/assets/share-bg.svg) top center / cover no-repeat;
 }
 
 .world-brand {
@@ -31,6 +32,11 @@
 
 .world-brand-icon {
   height: 30px;
+  width: auto;
+}
+
+.world-brand-logo {
+  height: 22px;
   width: auto;
 }
 
